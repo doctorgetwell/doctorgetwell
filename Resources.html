@@ -16,7 +16,7 @@ body { margin: 0; padding: 0; font-family: Arial,serif; font-weight: lighter; fo
 }
 .top{
   top:0;
-  height: 200px;
+  height: fit-content;
   position: fixed;
   z-index: 1;
 }
@@ -93,7 +93,11 @@ body { margin: 0; padding: 0; font-family: Arial,serif; font-weight: lighter; fo
   width: 97.5%;
 }
 .global-header {
-  background-image: url("DoctorGetWell_files/res_background_view.png");
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 0) 25%,
+    #2c7648 100%
+  );
   background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: 0% 50%; 
@@ -396,10 +400,12 @@ li {
   box-shadow: 0 0 30px #4db96d inset;
 }
 .acup-option {
-  height: 420px; 
-  width: 300px;
+  height: 220px; 
+  width: 130px;
   overflow: hidden;
   margin: 40px;
+  padding-top: 1%;
+  padding-bottom: 1%;
   box-shadow: 0 0 15px #646464 inset;
   display: flex;
   justify-content: center;
@@ -503,8 +509,8 @@ body .gs-bidi-start-align.gs-visibleUrl.gs-visibleUrl-breadcrumb {
   <div class="w3-bar w3-black w3-opacity w3-hover-opacity-off w3-center w3-small">
     <a href="index.html" class="w3-bar-item w3-button" style="width:25%; white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">HOME</a>
     <a href="Acupuncture.html" class="w3-bar-item w3-button" style="width:25%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">ACUPUNCTURE</a>
-    <a href="Resources.html" class="w3-bar-item w3-button" style="width:25%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">RESOURCES</a>
-    <a href="About.html" class="w3-bar-item w3-button" style="width:25%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">ABOUT US</a>
+    <a href="Resources.html?q=acupuncture site:www.healthcmi.com/acupuncture-continuing-education-news OR site:acupuncturetoday.com/issues/current-issue" class="w3-bar-item w3-button" style="width:25%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">RESOURCES</a>
+    <a href="http://acu-well.com/default.html" class="w3-bar-item w3-button" style="width:25%;white-space: nowrap;overflow: hidden;text-overflow: ellipsis;">ABOUT US</a>
   </div>
 </div>
   </div>
@@ -530,7 +536,7 @@ body .gs-bidi-start-align.gs-visibleUrl.gs-visibleUrl-breadcrumb {
     <br>
     
     <div class="w3-card round w3-center button-menu">
-      <a href="Resources.html" class="w3-bar-item w3-padding-large fit_button" style="background-color: #e7e184; box-shadow: 0 0 30px #b9984d inset;">
+      <a href="Resources.html?q=acupuncture site:www.healthcmi.com/acupuncture-continuing-education-news OR site:acupuncturetoday.com/issues/current-issue" class="w3-bar-item w3-padding-large fit_button" style="background-color: #e7e184; box-shadow: 0 0 30px #b9984d inset;">
         <img src="./DoctorGetWell_files/res_logo.png" class="button-image">
         <img src="./DoctorGetWell_files/res_logo.gif" class="button-image-rot">
         <br>
@@ -540,7 +546,7 @@ body .gs-bidi-start-align.gs-visibleUrl.gs-visibleUrl-breadcrumb {
     <br>
     
     <div class="w3-card round w3-center button-menu">
-      <a href="About.html" class="w3-bar-item w3-padding-large fit_button">
+      <a href="http://acu-well.com/default.html" class="w3-bar-item w3-padding-large fit_button">
         <img src="./DoctorGetWell_files/about_logo.png" class="button-image">
         <img src="./DoctorGetWell_files/about_logo.gif" class="button-image-rot">
         <br>
@@ -859,7 +865,7 @@ body .gs-bidi-start-align.gs-visibleUrl.gs-visibleUrl-breadcrumb {
               padding-left: 0.5em;
               margin-bottom: 10px;
               font-weight: bold; font-size: 175%; color:#07543e;
-          ">Acupuncture Latest News </span>
+          ">Acupuncture News </span>
           <span class="intro" id="loading"  style="
               display: block;
               margin-left: 0em;
@@ -870,6 +876,19 @@ body .gs-bidi-start-align.gs-visibleUrl.gs-visibleUrl-breadcrumb {
               text-align: justify;
               margin-bottom: 15px;
           ">Loading...<br></span>
+          <span class="intro" id="loading"  style="
+              display: block;
+              margin-left: 0em;
+              padding-left: 0.5em;
+              font-weight: bolder;
+              margin-left: 2.5px;
+              margin-right: 16px;
+              text-align: justify;
+              margin-bottom: 15px;
+          ">The links displayed below are search results provided by Google Search. 
+          <br>
+          <span style="color: rgb(116, 14, 7)">(Doctorgetwell and FRAIM does not endorse any commercial products that may be advertised on these sites.)</span>
+          <br>  </span>
           <script async src="https://cse.google.com/cse.js?cx=255bf70401c9d4033">
           </script>
           <div class="gcse-searchresults-only"></div>
@@ -892,45 +911,41 @@ body .gs-bidi-start-align.gs-visibleUrl.gs-visibleUrl-breadcrumb {
 
         <div class="flex-container" style="width: 100%;">
           <a href="Library.html" class="w3-card round acup-option option_button-1">
-                  <img src="DoctorGetWell_files/res_1.png" style="width: 70%; height: 70%; margin:auto; margin-bottom: 0px;" class="round">
-                  <span style="font-weight:bold; font-size: 1.75em; color: #f5f867; text-shadow:1px 1px 0 rgb(89, 54, 54); margin:auto; margin-top: 0px;">Essential Library</span>
+                  <img src="DoctorGetWell_files/res_1.png" style="width: 50%; height: 50%; margin:auto; margin-bottom: 0px;" class="round">
+                  <span style="font-weight:bold; font-size: 1.75em; color: #f5f867; text-shadow:1px 1px 0 rgb(89, 54, 54); margin:auto; margin-top: 0px;  text-align: center;">Library</span>
           </a>
-          <a href="Links.html" class="w3-card round acup-option option_button-2">
-              <img src="DoctorGetWell_files/res_2.png" style="width: 70%; height: 70%; margin:auto; margin-bottom: 0px;" class="round">
-              <span style="font-weight:bold; font-size: 1.75em; color: #ecff43; text-shadow:1px 1px 0 rgb(89, 54, 54); text-align: center; margin:auto; margin-top: 0px; text-wrap:balance;overflow: hidden;text-overflow: ellipsis;">Useful Links</span>
+          <a href="http://fraim.org/Links.asp" class="w3-card round acup-option option_button-2">
+              <img src="DoctorGetWell_files/res_2.png" style="width: 50%; height: 50%; margin:auto; margin-bottom: 0px;" class="round">
+              <span style="font-weight:bold; font-size: 1.75em; color: #ecff43; text-shadow:1px 1px 0 rgb(89, 54, 54); text-align: center; margin:auto; margin-top: 0px; text-wrap:balance;overflow: hidden;text-overflow: ellipsis; text-align: center;">Links</span>
           </a>
         </div>
 
-        <span style="margin-top:1em; margin-left: 0.2em; font-size: 3.25em;  color:#f9ed7d; font-weight: bold; text-shadow: -1px -1px 0 rgb(112, 60, 4), 1px -1px 0 rgb(112, 60, 4), -1px 1px 0 rgb(112, 60, 4), 1px 1px 0 rgb(112, 60, 4), rgb(236, 141, 86) 1px 0 10px ">Comments Section</span>
-        <div style="margin-left: 25px; margin-bottom: 20px; margin-right: 30px; margin-top: 10px;">
-          <span style="font-size: 1.85em;font-weight: bold; text-shadow:-1px -1px 0 rgb(204, 237, 245), 1px -1px 0 rgb(176, 205, 212), -1px 1px 0 rgb(176, 205, 212), 1px 1px 0 rgb(130, 177, 141), #ffffff 0px 4px 10px; margin-bottom: 35px; ">
-            <span style="color:#054231; ">If you have any questions related to acupuncture, please comment below for professional acupunctural advice from Dr. Alex Tatevian. 
-              <br><br>  
-              <span style="color:#02521a">IMPORTANT: Please note that the views and information provided on this website are not meant to substitute for the advice of local medical experts and doctors.</span> </span>
-              <br><br>
-            <span style="color:#9d2aa5; font-style: italic; font-size: 1.35em;">Suggestions for this website would be also highly appreciated.</span>
-          </span>  
-          <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <div class="flex-container" style="margin-left: auto; margin-right: auto;" >
+          <span style="font-size: 2.25em;  color:#f9ed7d; 
+          font-weight: bold; text-shadow: -1px -1px 0 rgb(112, 60, 4), 1px -1px 0 rgb(112, 60, 4), -1px 1px 0 rgb(112, 60, 4), 1px 1px 0 rgb(112, 60, 4), rgb(161, 255, 203) 1px 0 10px ">This website is brought to you by:</span>
         </div>
 
-        <div class="w3-card round card-att w3-margin card-settings">
-          <span class="block-info">Comments</span>
-          <div class="intro">
-              <ul id="list"></ul>
-
-              <br>
-              <form id = "contactForm_main" onsubmit="sendMessage()">
-                <fieldset>
-                  <legend style="color: #005f19;">Message</legend>
-                  <span>Email: </span><input id="email_main" required type="email"><br>
-                  <span>Name: </span><input id="name_main" required type="text"><br><br>
-                  <span>Enter your message for Dr. Alex Tatevian or this website:</span><br>
-                  <textarea id="message_main" required rows="3"
-                  style="width:100%"></textarea>
+        <div class="flex-container">
+          <div style="margin:40px; text-align:center;">
+            <a href="http://acu-well.com" style="text-align: center;">
+                  <img src="DoctorGetWell_files/ACU_WELL_Logo.png" style="width: 300px; margin:auto; margin-bottom: 0px;" class="round">
                   <br>
-                  <button id="btn" type="submit" style = "background-color: #f1f74b; box-shadow: 0 0 30px #b9984d inset; color: #005f19;">Submit</button>
-                </fieldset>
-              </form>
+            </a>
+            <a href="http://acu-well.com"  style="margin-top: 15px; font-size: 150%; color: rgb(101, 248, 172); text-shadow:1px 1px 0 rgb(89, 54, 54); margin-top: 0px;  text-align: center; text-decoration: none; width: 300px;">Acupuncture Integerative Medicine (ACU WELL)</a>
+          </div>
+
+          <div style="margin:40px; margin-bottom: 80px; text-align:center;">
+            <a href="http://fraim.org" style="text-align: center;">
+                  <img src="DoctorGetWell_files/fraim_logo.png" style="width: 300px; margin:auto; margin-bottom: 0px;" class="round">
+                  <br>
+            </a>
+            <a href="http://fraim.org"  style="margin-top: 15px; font-size: 150%; color: rgb(101, 248, 172); text-shadow:1px 1px 0 rgb(89, 54, 54); margin-top: 0px;  text-align: center; text-decoration: none; width: 300px;">Foundation for Acupuncture & Integerative Medicine (FRAIM)</a>
           </div>
         </div>
       
