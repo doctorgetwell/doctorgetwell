@@ -325,178 +325,6 @@ body { margin: 0; padding: 0; font-family: Arial,serif; font-weight: 50; font-si
 </head>
 <body class="w3-theme-l5 global-header fade-animation">
 <script>
-  setInterval(() => {
-      var now = new Date();
-      var seconds = now.getSeconds()
-      var minutes = now.getMinutes()
-      var hours = now.getHours()
-
-      if(1 <= hours && hours <= 12) {
-        document.getElementById("intervals").src = "./clock_files/1_12.png"
-      } else if(13 <= hours && hours < 24 || hours == 0) {
-        document.getElementById("intervals").src = "./clock_files/13_0.png"
-      } 
-
-      //Zodiacs
-      
-      if (hours == 23 || hours == 0) { //Rat
-        document.getElementById("element_base").src = "./clock_files/water_base.png"
-        document.getElementById("element").src = "./clock_files/water.png"
-        document.getElementById("time_description").innerHTML = "Hour of the Rat <br> 11pm - 1am  <br>"
-        document.getElementById("animal").src ="./clock_files/rat.png"
-
-        document.getElementById("time_description").style.color = "#003cff"
-        document.getElementById("element_name").style.color = "#003cff"
-        document.getElementById("element_name").innerHTML = "Water"
-      } else if (hours == 21 || hours == 22) { //Pig
-        document.getElementById("element_base").src = "./clock_files/water_base.png"
-        document.getElementById("element").src = "./clock_files/water.png"
-        document.getElementById("time_description").innerHTML = "Hour of the Pig <br> 9pm - 11pm  <br>"
-        document.getElementById("animal").src ="./clock_files/pig.png"
-
-        document.getElementById("time_description").style.color = "#003cff"
-        document.getElementById("element_name").style.color = "#003cff"
-        document.getElementById("element_name").innerHTML = "Water"
-      } else if (hours == 19 || hours == 20) { //Dog
-        document.getElementById("element_base").src = "./clock_files/earth_base.png"
-        document.getElementById("element").src = "./clock_files/earth.png"
-        document.getElementById("time_description").innerHTML = "Hour of the Dog <br> 7pm - 9pm  <br>"
-        document.getElementById("animal").src ="./clock_files/dog.png"
-
-        document.getElementById("time_description").style.color = "#cf950c"
-        document.getElementById("element_name").style.color = "#cf950c"
-        document.getElementById("element_name").innerHTML = "Earth"
-      } else if (hours == 17 || hours == 18) { //Chicken
-        document.getElementById("element_base").src = "./clock_files/metal_base.png"
-        document.getElementById("element").src = "./clock_files/metal.png"
-        document.getElementById("time_description").innerHTML = "Hour of the Chicken <br> 5pm - 7pm  <br>"
-        document.getElementById("animal").src ="./clock_files/chicken.png"
-
-        document.getElementById("time_description").style.color = "#edf515"
-        document.getElementById("element_name").style.color = "#edf515"
-        document.getElementById("element_name").innerHTML = "Metal"
-      } else if (hours == 15 || hours == 16) { //Monkey
-        document.getElementById("element_base").src = "./clock_files/metal_base.png"
-        document.getElementById("element").src = "./clock_files/metal.png"
-        document.getElementById("time_description").innerHTML = "Hour of the Monkey <br> 3pm - 5pm  <br>"
-        document.getElementById("animal").src ="./clock_files/monkey.png"
-
-        document.getElementById("time_description").style.color = "#edf515"
-        document.getElementById("element_name").style.color = "#edf515"
-        document.getElementById("element_name").innerHTML = "Metal"
-      } else if (hours == 13 || hours == 14) { //Goat
-        document.getElementById("element_base").src = "./clock_files/earth_base.png"
-        document.getElementById("element").src = "./clock_files/earth.png"
-        document.getElementById("time_description").innerHTML = "Hour of the Goat <br> 1pm - 3pm  <br>"
-        document.getElementById("animal").src ="./clock_files/goat.png"
-
-        document.getElementById("time_description").style.color = "#cf950c"
-        document.getElementById("element_name").style.color = "#cf950c"
-        document.getElementById("element_name").innerHTML = "Earth"
-      } else if (hours == 11 || hours == 12) { //Horse
-        document.getElementById("element_base").src = "./clock_files/fire_base.png" 
-        document.getElementById("element").src = "./clock_files/fire.png"
-        document.getElementById("time_description").innerHTML = "Hour of the Horse <br> 11am - 1pm  <br>"
-        document.getElementById("animal").src ="./clock_files/horse.png"
-
-        document.getElementById("time_description").style.color = "rgb(255, 0, 0)"
-        document.getElementById("element_name").style.color = "rgb(255, 0, 0)"
-        document.getElementById("element_name").innerHTML = "Fire" 
-      } else if (hours == 9 || hours == 10) { //Snake
-        document.getElementById("element_base").src = "./clock_files/fire_base.png"
-        document.getElementById("element").src = "./clock_files/fire.png"
-        document.getElementById("time_description").innerHTML = "Hour of the Snake <br> 9am - 11am  <br>"
-        document.getElementById("animal").src ="./clock_files/snake.png"
-
-        document.getElementById("time_description").style.color = "rgb(255, 0, 0)"
-        document.getElementById("element_name").style.color = "rgb(255, 0, 0)"
-        document.getElementById("element_name").innerHTML = "Fire" 
-      } else if (hours == 7 || hours == 8) { //Dragon
-        document.getElementById("element_base").src = "./clock_files/earth_base.png"
-        document.getElementById("element").src = "./clock_files/earth.png"
-        document.getElementById("time_description").innerHTML = "Hour of the Dragon <br> 7am - 9am  <br>"
-        document.getElementById("animal").src ="./clock_files/dragon.png"
-
-        document.getElementById("time_description").style.color = "#cf950c"
-        document.getElementById("element_name").style.color = "#cf950c"
-        document.getElementById("element_name").innerHTML = "Earth"
-      } else if (hours == 5 || hours == 6) { //Rabbit
-        document.getElementById("element_base").src = "./clock_files/wood_base.png"
-        document.getElementById("element").src = "./clock_files/wood.png"
-        document.getElementById("time_description").innerHTML = "Hour of the Rabbit <br> 5am - 7am  <br>"
-        document.getElementById("animal").src ="./clock_files/rabbit.png"
-
-        document.getElementById("time_description").style.color = "#09c125"
-        document.getElementById("element_name").style.color = "#09c125"
-        document.getElementById("element_name").innerHTML = "Wood"
-      } else if (hours == 3 || hours == 4) { //Tiger
-        document.getElementById("element_base").src = "./clock_files/wood_base.png"
-        document.getElementById("element").src = "./clock_files/wood.png"
-        document.getElementById("time_description").innerHTML = "Hour of the Tiger <br> 3am - 5am  <br>"
-        document.getElementById("animal").src ="./clock_files/tiger.png"
-
-        document.getElementById("time_description").style.color = "#09c125"
-        document.getElementById("element_name").style.color = "#09c125"
-        document.getElementById("element_name").innerHTML = "Wood"
-      } else if (hours == 1 || hours == 2) { //Cow
-        document.getElementById("element_base").src = "./clock_files/earth_base.png"
-        document.getElementById("element").src = "./clock_files/earth.png"
-        document.getElementById("time_description").innerHTML = "Hour of the Cow <br> 1am - 3am  <br>"
-        document.getElementById("animal").src ="./clock_files/cow.png"
-
-        document.getElementById("time_description").style.color = "#cf950c"
-        document.getElementById("element_name").style.color = "#cf950c"
-        document.getElementById("element_name").innerHTML = "Earth"
-      } 
-
-
-      // *** // *** // *** // 
-
-      if (hours > 12) {
-        hours -= 12
-      }
-      document.getElementById("seconds").src = "./clock_files/s" + (seconds).toString()  + ".png"
-      document.getElementById("minutes").src = "./clock_files/m" + (minutes).toString()  + ".png"
-      hours *= 5
-      if (12 <= minutes && minutes < 12*2) {
-        hours += 1
-      } else if (12*2 <= minutes && minutes < 12*3) {
-        hours += 2
-      } else if (12*3 <= minutes && minutes < 12*4) {
-        hours += 3
-      } else if (12*4 <= minutes && minutes < 12*5) {
-        hours += 4
-      }
-      document.getElementById("hours").src = "./clock_files/h" + (hours).toString()  + ".png"
-
-      
-  }, 1000)
-
-  var dot = 0
-
-  const myInterval = setInterval(() => {
-    if (dot == 0) {
-      document.getElementById("loading_clock").innerHTML = document.getElementById("loading_clock").innerHTML.slice(0, -3) + " .." 
-      dot += 1
-    } else if (dot == 1) {
-      document.getElementById("loading_clock").innerHTML = document.getElementById("loading_clock").innerHTML.slice(0, -3) + ". ."
-      dot += 1
-    } else {
-      document.getElementById("loading_clock").innerHTML = document.getElementById("loading_clock").innerHTML.slice(0, -3) + ".. "
-      dot = 0
-    }
-    
-  }, 500);
-
-  function timer() {
-    document.getElementById("loading_clock").style.display = "none"
-    document.getElementById("clock").style.display = "block"
-    clearInterval(myInterval)
-  }
-
-  function animal_load() {
-    document.getElementById("flex-info").style.display = "flex"
-  }
 </script>
 <!-- Navbar -->
 <!-- Navbar -->
@@ -552,8 +380,20 @@ body { margin: 0; padding: 0; font-family: Arial,serif; font-weight: 50; font-si
         <div class="outer-wrapper"><div class="inner-wrapper">About Us</div></div>
       </a>
     </div>
+    <!--  -->
+    <br>
+
+    <div class="w3-card round w3-center button-menu">
+      <a href="http://doctorgetwell.org/Fun.html#fun" class="w3-bar-item w3-padding-large fit_button">
+        <img src="./DoctorGetWell_files/fun_logo.png" class="button-image">
+        <img src="./DoctorGetWell_files/fun_logo.gif" class="button-image-rot">
+        <br>
+        <div class="outer-wrapper"><div class="inner-wrapper">Fun</div></div>
+      </a>
+    </div>
     <div style="height: 75%;"></div>
     <br>
+    <!--  -->
     
   <!-- End Left Column -->
   </div>
@@ -613,32 +453,6 @@ body { margin: 0; padding: 0; font-family: Arial,serif; font-weight: 50; font-si
           I will be happy to guide you and
           share my experience. <br>
           Welcome! <br></span>
-      </div>
-
-      <div class="w3-margin" style="text-align: center;">
-        <span id="loading_clock" style="font-weight: bold; font-size: 200%; color:#ffffff;">Loading Chinese zodiac clock...</span>
-      </div>
-
-      <div class="w3-margin" style="margin-bottom: -1%; display: none" id="clock">
-        <div class="stack clock-margin">
-          <img src="./clock_files/clock_base.png" class = "clock_img">
-          <img src="./clock_files/water_base.png" class = "clock_img" id="element_base">
-          <img class = "clock_img" id = "intervals">
-          <img class = "clock_img" id="seconds" onload="timer()">
-          <img class = "clock_img" id="minutes">
-          <img class = "clock_img" id="hours">
-          <img class = "clock_img" id = "element">
-          <img src="./clock_files/stem_statues.png" class = "clock_img">
-        </div>
-      </div>
-
-      <div class="flex-container" style="margin-left: auto; margin-right: auto; margin-top: 0; display: none;" id="flex-info">
-        <div class="w3-card card-att card-settings" style="margin-left: 4%; width: fit-content;float: left; height: fit-content; margin-top: auto; margin-bottom: auto; padding: 20px; border-radius: 10px; background-color: rgba(254, 255, 191, 0.646); text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black, 1px 1px 0 black, rgb(161, 255, 203) 1px 0 10px ">
-          <span id="time_description" style="font-weight: bold; font-size: 235%; color:#003cff;">Hour of the Rat <br> 11pm - 1am  <br></span>
-          <span style="font-weight: bold; font-size: 180%; color:#ffffff;">Element: </span>
-          <span id="element_name" style="font-weight: bold; font-size: 180%; color:#003cff;  ">Water</span><br>
-        </div>
-        <img class="flex-img" id="animal" onload="animal_load()">
       </div>
 
       <div class="w3-margin quote">
